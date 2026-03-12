@@ -1,0 +1,41 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Tcm Web Tests" parallel="tests" thread-count="7">
+    <test name="Test runs grid">
+        <classes>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRunsGridPageTest"/>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRuns3DotsMenuTest"/>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRunsFiltersTest"/>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRunsBulkActionsTest"/>
+        </classes>
+    </test>
+    <test name="Test run page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRunPageTest"/>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRunsElapsedTimeTest"/>
+            <class name="com.zebrunner.automation.gui.tcm.testrun.TestRunPageFiltersTest"/>
+        </classes>
+    </test>
+    <test name="Shared steps">
+        <classes>
+            <class name="com.zebrunner.automation.gui.tcm.SharedStepsTest"/>
+        </classes>
+    </test>
+    <test name="Test cases">
+        <classes>
+            <class name="com.zebrunner.automation.gui.tcm.TestCasePageTest"/>
+            <class name="com.zebrunner.automation.gui.tcm.DedicatedTestCasePageTest"/>
+        </classes>
+    </test>
+    <test name="Trash bin">
+        <classes>
+            <class name="com.zebrunner.automation.gui.tcm.TrashBinTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Test suite">
+        <classes>
+            <class name="com.zebrunner.automation.gui.tcm.TestSuiteTest">
+            </class>
+        </classes>
+    </test>
+</suite>

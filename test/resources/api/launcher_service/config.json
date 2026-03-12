@@ -1,0 +1,17 @@
+{
+  "branch": "main",
+  "dockerImage": "maven:3.8-openjdk-11",
+  "launchCommand": "mvn clean test -Dsuite=web",
+  "executor": "ZEBRUNNER",
+  "executorId": -1,
+  "envVars": [],
+  "testingPlatform": "ZEBRUNNER_ENGINE",
+  "testingPlatformId": null,
+  "providerCapabilities": [],
+  "customCapabilities": [],
+  "notificationChannels": {
+    "teamsChannels": "myTeamChannel",
+    "slackChannels": "mySlackChannel",
+    "emails": "myEmail@myEmail.myml"
+  }
+}

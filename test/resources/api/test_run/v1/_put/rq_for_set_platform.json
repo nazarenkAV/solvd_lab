@@ -1,0 +1,4 @@
+{
+  "name": "${name}"
+  <#if version != "">,"version": "${version}"</#if>
+}

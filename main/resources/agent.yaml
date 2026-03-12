@@ -1,0 +1,6 @@
+reporting:
+  enabled: false
+  project-key: <your-project-key>
+  server:
+    hostname: <your-hostname>
+    access-token: <your-access-token>

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Create Workspace Test">
+
+    <!--    DO NOT RUN THIS TEST MANUALLY   -->
+    <!--    IF YOU NEED TO RUN THIS TEST REMIND ALESYA VABISHCHEVICH  -->
+
+    <test name="New tenant initialization" enabled="true">
+        <classes>
+            <class name="com.zebrunner.automation.gui.CreateWorkspaceTest"/>
+        </classes>
+    </test>
+
+</suite>

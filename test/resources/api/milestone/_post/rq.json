@@ -1,0 +1,6 @@
+{
+  <#if name??>"name":"${name}",</#if>
+  "completed":${completed},
+  "dueDate":"${dueDate}",
+  "startDate":"${startDate}"
+}

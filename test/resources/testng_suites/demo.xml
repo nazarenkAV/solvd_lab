@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Demo Suite">
+
+    <test name="Zebrunner web tests">
+        <classes>
+            <class name="com.zebrunner.automation.gui.DemoTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,7 @@
+{
+  <#if uuid??>"uuid": "${uuid}",</#if>
+  <#if name??>"name": "${name}",</#if>
+  <#if startedAt??> "startedAt": "${startedAt}",</#if>
+  <#if framework??>  "framework": "${framework}",</#if>
+  <#if config??>  "config": ${config}</#if>
+}

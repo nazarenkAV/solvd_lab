@@ -1,0 +1,6 @@
+{
+  <#if endedAt??>"endedAt": "${endedAt}",</#if>
+  <#if result??>"result": "${result}",</#if>
+  "reason": "Java.lang.AssertionError: The following asserts failed:\nexpected [2023, February 29] but found [2023, February 01]\nat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)\nat org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)"
+
+}

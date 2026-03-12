@@ -1,0 +1,275 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Minimal Acceptance(automation block)" parallel="tests" thread-count="25">
+
+    <test name="Launches page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.TestRunsPageTest">
+                <methods>
+                    <include name="_checkMainElementsOnAutomationLaunchesPageWithoutLaunches"/>
+                    <include name="webJobRun"/>
+                    <include name="webRunTestVerificationOfResultPage"/>
+                    <include name="relaunchLaunchesTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Launchers">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.launcher.LauncherVariablesTest">
+                <methods>
+                    <include name="addAndDeleteChoiceEnvVariable"/>
+                    <include name="editChoiceCapabilityVariableWithListOfValue"/>
+                    <include name="addAndDeleteStringCapability"/>
+                    <include name="addAndDeleteIntegerCapability"/>
+                    <include name="addAndDeleteBooleanEnvVariable"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.launcher.LauncherCreationTest"/>
+        </classes>
+    </test>
+    <test name="Test details">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.TestDetailsTest">
+                <methods>
+                    <include name="verifyMainTestDetailPageElementsAndOpeningViaClickOnTest"/>
+                    <include name="verifyMarkingAsPassed"/>
+                    <include name="verifyMarkingAsFailed"/>
+                    <include name="possibilitySwitchingBetweenHistoryTabsAndMarkingAsForOldTests"/>
+                    <include
+                            name="verifyTcmLabelsDisplayedOnThePageWithoutAnyOthersLabelsAndReferencesAndPreviewOpeningForCaseWithSharedStep"/>
+                    <include name="verifyLinkIssueToFailedAndSkippedTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Presets">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.preset.PresetsTest">
+                <methods>
+                    <include name="createPresetWithNameOnlyAndDeleteIt"/>
+                    <include name="presetScheduling"/>
+                    <include name="createPresetModalMainElementsPresence"/>
+                    <include name="pauseAndResumeScheduleOnPreset"/>
+                    <include name="userCanLaunchPresetAndNavigateBackForward"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.preset.UpdatePresetTest"/>
+        </classes>
+    </test>
+    <test name="Presets(variables)">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.preset.AddEnvVariablesToPresetTest"/>
+            <class name="com.zebrunner.automation.gui.smoke.preset.AddCapabilitiesToPresetTest"/>
+        </classes>
+    </test>
+    <test name="Dashboards">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.DashboardPageTest"/>
+        </classes>
+    </test>
+    <test name="Projects">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.ProjectPageElementsTest">
+                <methods>
+                    <include name="projectsMenuInNavigationBarTest"/>
+                    <include name="userRemainsOnTheSameProjectWhenSwitchingBetweenProjectScopePagesTest"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.CreateProjectModalTests">
+                <methods>
+                    <include name="newProjectCreationFromProjectPageTest"/>
+                    <include name="newProjectCreationFromHeaderTest"/>
+                    <include name="createNewPrivateProjectTest"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.ProjectSettingsModalTests">
+                <methods>
+                    <include name="editProjectTest"/>
+                    <include name="editProjectLeadTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Members">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.AddMemberModalAndMembersPageTest"/>
+            <class name="com.zebrunner.automation.gui.smoke.AddMemberProcessTest">
+                <methods>
+                    <include name="addMemberTest"/>
+                    <include name="changeMemberRoleTest"/>
+                    <include name="memberSearchFieldTest"/>
+                    <include name="possibilityToChangeRolesToAnotherMembersAndDefaultSortingTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Documentation page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.DocumentationPageTest"/>
+        </classes>
+    </test>
+    <test name="Configuration page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.SettingsPageTest"/>
+        </classes>
+    </test>
+    <test name="Integrations page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.IntegrationsPageTest"/>
+        </classes>
+    </test>
+    <test name="Milestones">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.MilestonesCreationTest">
+                <methods>
+                    <include name="mainElementsPresenceOnPage"/>
+                    <include name="addMilestoneModalElementsPresenceTest"/>
+                    <include name="createMilestoneWithoutDescriptionAndDeleteIt"/>
+                    <include name="addCompletedMilestoneAndVerifyUnableToAssignItToLaunch"/>
+                    <include
+                            name="createMilestoneWithoutDateAssignToLaunchAndVerifyOnlyOneMilestoneCanBeAssignedToLaunch"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.MilestonesEditingTest">
+                <methods>
+                    <include name="editMilestoneTest"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.MilestonesGrid">
+                <methods>
+                    <include name="testUserCanNavigateToMilestonePageUsingMenuAndBackToProjectGridViaBreadcrumb"/>
+                    <include name="testUserCanMarkMilestoneAsCompletedAndBack"/>
+                    <include name="testUserCanApplyFilteringByOpenAndCompleted"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Widgets">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.WidgetsPageTest"/>
+        </classes>
+    </test>
+    <test name="Login test">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.LoginFormTest"/>
+        </classes>
+    </test>
+    <test name="Automation launches - filters">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.AutomationLaunchesFiltersTest">
+                <methods>
+                    <include name="testRunFilterVerificationsTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Automation launches - settings">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.TestRunSettingsTest">
+                <methods>
+                    <include name="deleteTestRunTest"/>
+                    <include name="testRunMarkAsReviewedTest"/>
+                    <include name="verifyTestRunStatusForOnlyPassedTests"/>
+                    <include name="verifyTestMarkingAs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Add repo page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.addrepo.LauncherLoginTest"/>
+            <class name="com.zebrunner.automation.gui.smoke.addrepo.LauncherLoginWithGitHubTest"/>
+        </classes>
+    </test>
+    <test name="Invitation category" enabled="false">
+        <classes>
+            <class name="com.zebrunner.automation.gui.user.InvitationsTests">
+                <methods>
+                    <include name="loginToZebrunnerViaInvitationWithDotInUsername"/>
+                    <include name="userIsAbleToResendAnInvitationTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Jira issue">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.JiraIssueTest">
+                <methods>
+                    <include name="linkIssuePopOpeningUpViaTestGridAndTestResultPage"/>
+                    <include name="verifyTestRunStatusWithLinkedIssueToFailedTest"/>
+                    <include name="jiraTicketUnlinkTest"/>
+                    <include name="testKnownIssueRemainsAfterSecondRun"/>
+                    <include name="linkIssueToSeveralFailedTestViaCheckBox"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Webhooks">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.preset.WebhooksTest">
+                <methods>
+                    <include name="_webhookModalMainElementsPresence"/>
+                    <include name="editWebhook"/>
+                    <include name="checkWebhookTriggerWithSecretKey"/>
+                    <include name="checkWebhookTriggerWithoutSecretKey"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Account and profile">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.AccountSettingTest"/>
+        </classes>
+    </test>
+    <test name="Test Navigation">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.TestNavigationTest">
+                <methods>
+                    <include name="switchBetweenTestsByArrowsTest"/>
+                    <include name="switchBetweenTestsByKeyBoardTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+    <test name="Test card filter by status">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.FilterTestsByStatus"/>
+        </classes>
+    </test>
+    <test name="Test card actions">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.TestCardActions">
+                <methods>
+                    <include name="labelAndArtifactCount"/>
+                </methods>
+            </class>
+            <class name="com.zebrunner.automation.gui.smoke.TestRailLabelAndPreviewTest">
+                <methods>
+                    <include name="verifyTestRailPopUp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Test result page">
+        <classes>
+            <class name="com.zebrunner.automation.gui.smoke.TestResultsPageTest">
+                <methods>
+                    <include name="verifyTestRunResultHeaderAfterCollapseAndExpand"/>
+                    <include name="verifyUserCanReviewTestRun"/>
+                    <include name="verifyUserCanRelaunchLauncher"/>
+                    <include name="verifyUserCanAssignMilestoneToTestRun"/>
+                    <include name="verifyLabelFilter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Low screen resolution">
+        <classes>
+            <class name="com.zebrunner.automation.gui.LowResolutionTests">
+            </class>
+        </classes>
+    </test>
+</suite>

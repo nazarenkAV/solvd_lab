@@ -1,0 +1,9 @@
+{
+  <#if name??>"name": "${name}",</#if>
+   <#if className??>"className": "${className}",</#if>
+  <#if methodName??>"methodName": "${methodName}",</#if>
+  <#if startedAt??>"startedAt": "${startedAt}",</#if>
+  <#if maintainer??>"maintainer": "${maintainer}",</#if>
+  <#if testCase??>"testCase": "${testCase}"</#if>
+  <#if labels??>,"labels": ${labels}</#if>
+}

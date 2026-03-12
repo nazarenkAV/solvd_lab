@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "userId": "${userId}",
+      "role": "${role}"
+    }
+    <#if userId_1 ?exists || role_1 ?exists>,
+    {
+      "user": "${userId_1}",
+      "role": "${role_1}"
+    }
+    </#if>
+  ]
+}

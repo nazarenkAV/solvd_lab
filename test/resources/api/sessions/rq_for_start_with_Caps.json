@@ -1,0 +1,40 @@
+{
+  <#if sessionId??>"sessionId": "${sessionId}",</#if>
+  <#if startedAt??>"startedAt": "${startedAt}",</#if>
+  <#if status??>"status": "${status}",</#if>
+  <#if initiatedAt??>"initiatedAt": "${initiatedAt}",</#if>
+  "capabilities": {
+    <#if browserNameAct??> "browserName": "${browserNameAct}",</#if>
+    <#if browserVersionAct??> "browserVersion": "${browserVersionAct}",</#if>
+    <#if version??> "version": "${version}",</#if>
+    <#if nameAct??> "name": "${nameAct}",</#if>
+    <#if sessionNameAct??> "sessionName": "${sessionNameAct}",</#if>
+    <#if platformNameAct??> "platformName": "${platformNameAct}", </#if>
+    <#if platformAct??> "platform": "${platformAct}", </#if>
+    <#if deviceModelAct??> "deviceModel": "${deviceModelAct}", </#if>
+    <#if platformVersionAct??> "platformVersion": "${platformVersionAct}",</#if>
+    "proxy": {},
+    "slotCapabilities": {
+      <#if platformNameSlot??>"platformName": "${platformNameSlot}",</#if>
+      <#if platformVersionSlot??> "platformVersion": "${platformVersionSlot}",</#if>
+      <#if versionSlot??> "version": "${versionSlot}",</#if>
+      <#if deviceNameSlot??> "deviceName": "${deviceNameSlot}",</#if>
+      <#if vncLinkSlot??> "vncLink": "${vncLinkSlot}",</#if>
+      "slotCapabilities": "slotCapabilities"
+    },
+    "desired": {
+      <#if platformNameDesired??>"platformName": "${platformNameDesired}",</#if>
+      "desired": "desired"
+    }
+  },
+   "desiredCapabilities": {
+     <#if browserNameDes??> "browserName": "${browserNameDes}",</#if>
+     <#if browserVersionDes??> "browserVersion": "${browserVersionDes}",</#if>
+     <#if nameDes??> "name": "${nameDes}",</#if>
+     <#if sessionNameDes??> "sessionName": "${sessionNameDes}",</#if>
+     <#if platformNameDes??>: "${platformNameDes}", </#if>
+     <#if versionDes??> "version": "${versionDes}",</#if>
+     "proxy": {}
+},
+  "testIds": ${testId}
+}
