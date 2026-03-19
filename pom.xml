@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.zebrunner</groupId>
-    <artifactId>zbr-qa</artifactId>
+    <artifactId>hospital</artifactId>
     <version>1.0-snapshot</version>
     <packaging>jar</packaging>
     <name>zbr-qa</name>
